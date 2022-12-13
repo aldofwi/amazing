@@ -22,7 +22,8 @@ function Home() {
               details="How Constant Innovation Creates Radically Successful Business Paperback"
               price={11.96}
               image="https://m.media-amazon.com/images/I/81RCff1NpnL.jpg"
-              rating={3} 
+              rating={3}
+              quantity={1}
             />
 
             <Product 
@@ -31,7 +32,8 @@ function Home() {
               details="Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
               price={239.99}
               image="https://m.media-amazon.com/images/I/81rgIlDm6wL._AC_SL1500_.jpg"
-              rating={4} 
+              rating={4}
+              quantity={1}
             />
 
           </div>
@@ -44,7 +46,8 @@ function Home() {
               details=" Graphite / Black (1.63 x 4.04 x 8.9 inches)"
               price={164.59}
               image="https://media.s-bol.com/pPzWrBwW4MX/550x772.jpg"
-              rating={3} 
+              rating={3}
+              quantity={1}
             />
             <Product 
               id="49538088"
@@ -52,7 +55,8 @@ function Home() {
               details="Smart speaker with Alexa | Charcoal Fabric"
               price={98.99}
               image="https://media.kohlsimg.com/is/image/kohls/3979967_Charcoal?wid=600&hei=600&op_sharpen=1"
-              rating={5} 
+              rating={5}
+              quantity={1}
             />
             <Product 
               id="49538001"
@@ -60,7 +64,8 @@ function Home() {
               details="Silver (4th Generation)"
               price={598.99}
               image="https://m.media-amazon.com/images/I/81okPLS2ZVL.jpg"
-              rating={4} 
+              rating={4}
+              quantity={1}
             />
           
           </div>
@@ -73,7 +78,8 @@ function Home() {
               details="Super Ultra Wide Dual WQHD 5120 x 1440"
               price={1094.98}
               image="https://m.media-amazon.com/images/I/81I+Tx8CFYL._AC_SL1500_.jpg"
-              rating={4} 
+              rating={4}
+              quantity={1}
             />
 
           </div>

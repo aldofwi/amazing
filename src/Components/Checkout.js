@@ -8,10 +8,26 @@ import FlipMove from "react-flip-move"
 
 function Checkout() {
 
-    const [{ basket, user }, dispatch] = useStateValue();
+    const [{ basket, user }] = useStateValue(); 
 
-    // HOMEWORK : React FLIP MOVE (with index Keys)
-    // MY HOMEWORK : Hoover Home on each product (+Slide)
+    // BASKET / SANS DOUBLONS
+    /*
+    if(basket?.length > 1) {
+
+        for(let a=0; a<basket.length-1; a++) {
+
+            if(basket[a].id === basket[a+1].id) {
+                
+                basket[a].quantity++;
+                basket.splice(a+1, 1);
+            }
+        }
+    }
+    */
+    console.log("BASKET >>> ", basket);
+
+    // HOMEWORK : QUANTITY Product
+    // MY HOMEWORK : Username SetUser
 
   return (
 
@@ -33,14 +49,16 @@ function Checkout() {
                     >
                 { basket.map(item => (
                     <div key={item.title}>
-                    <CheckoutProduct 
-                        id={item.id}
-                        title={item.title}
-                        image={item.image}
-                        price={item.price}
-                        rating={item.rating}
-                        key={item.id}
-                    />
+                        <CheckoutProduct 
+                            id={item.id}
+                            details={item.details}
+                            title={item.title}
+                            image={item.image}
+                            price={item.price}
+                            rating={item.rating}
+                            quantity={item.quantity}
+                            key={item.id}
+                        />
                     </div>
                 ))
                 }

@@ -48,6 +48,10 @@
     color: #111;
 }
 
+.product > button:active {
+    transform: translateY(2px);
+}
+
 .product__price {
     margin-top: 5px;
 }

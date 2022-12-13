@@ -3,9 +3,9 @@ import React from 'react'
 import "../Styles/CheckoutProduct.css"
 import { useStateValue } from '../StateProvider'
 
-function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
+function CheckoutProduct({ id, image, title, details, price, rating, quantity, hideButton }) {
 
-    const [{ basket }, dispatch] = useStateValue();
+    const [, dispatch] = useStateValue();
 
     const removeFromBasket = () => {
 
@@ -24,6 +24,7 @@ function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
 
         <div className="checkoutProduct__info">
             <p className="checkoutProduct__title">{title}</p>
+            <p className="checkoutProduct__details"><small>{details}</small></p>
             <p className="checkoutProduct__price">
                 <small>$</small>
                 <strong>{price}</strong>
@@ -38,6 +39,7 @@ function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
             {!hideButton && (
             <button onClick={removeFromBasket}>Remove from Basket</button>
             )}
+            <p><small>Qty : {quantity}</small></p>
         </div>
 
     </div>

@@ -41,8 +41,7 @@ function Amazing() {
         })
       }
     })
-    // eslint-disable-next-line
-  }, [])
+  }, [dispatch])
 
   return (
 

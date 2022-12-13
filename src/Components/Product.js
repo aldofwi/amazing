@@ -2,11 +2,9 @@ import React from 'react'
 import '../Styles/Product.css'
 import { useStateValue } from '../StateProvider'
 
-function Product({ id, title, details, price, image, rating }) {
+function Product({ id, title, details, price, image, rating, quantity }) {
 
-    // eslint-disable-next-line no-unused-vars
-    const [{ basket }, dispatch] = useStateValue();
-
+    const [, dispatch] = useStateValue();
     // console.log(">>> This is the basket", basket);
 
     const addToBasket = () => {
@@ -20,21 +18,23 @@ function Product({ id, title, details, price, image, rating }) {
                 image: image,
                 price: price,
                 rating: rating,
+                quantity: quantity,
             },
         });
+        
     };
 
   return (
     <div className='product'>
         <div className='product__info'>
-        
+
             <p><strong>{ title }</strong></p>
             <p><small>{ details }</small></p>
             <p className='product__price'>
                 <small>$</small>
                 <strong>{ price }</strong>
             </p>
-        
+
             <div className='product__rating'>
                 {Array(rating)
                     .fill()
