@@ -13,8 +13,40 @@ function CheckoutProduct({ id, image, title, details, price, rating, quantity, h
         dispatch({
             type: 'REMOVE_FROM_BASKET',
             id: id,
+            quantity: quantity,
         })
-    }   
+    }
+
+    const incrementItem = () => {
+
+        if(quantity < 11) {
+            // Increment value of Quantity
+            dispatch({
+                type: 'ADD_TO_BASKET',
+                item: {
+                    id: id,
+                    title: title,
+                    details: details,
+                    image: image,
+                    price: price,
+                    rating: rating,
+                    quantity: quantity,
+                },
+            });
+        }
+    }
+
+    const decrementItem = () => {
+
+        if(quantity > 1) {
+            // Decrement value of Quantity
+            dispatch({
+                type: 'REMOVE_FROM_BASKET',
+                id: id,
+                quantity: quantity,
+            })
+        }
+    }
 
   return (
 
@@ -36,10 +68,19 @@ function CheckoutProduct({ id, image, title, details, price, rating, quantity, h
                     <p key={i}>⭐</p>
                 ))}
             </div>
+            <div className="checkoutProduct__quantity">
+                <p>
+                <small>Quantity </small>
+                {!hideButton && (<button onClick={decrementItem}>-</button>)}
+                <small>{quantity}</small>
+                {!hideButton && (<button onClick={incrementItem}>+</button>)}
+                </p> 
+            </div>
+            
             {!hideButton && (
             <button onClick={removeFromBasket}>Remove from Basket</button>
             )}
-            <p><small>Qty : {quantity}</small></p>
+            
         </div>
 
     </div>

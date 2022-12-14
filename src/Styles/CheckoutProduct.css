@@ -44,3 +44,21 @@
     font-size: 15px;
     font-weight: 500;
 }
+
+.checkoutProduct__quantity > p > button {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.checkoutProduct__quantity > button {
+    background: lightgray;
+    border: 1px thick;
+    border-radius: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+    background-color: none;
+    font-family: 'FontAwesome';
+    font-size: small;
+}

@@ -47,14 +47,20 @@ const reducer = (state, action) => {
                 basket: [],
             };
         case 'REMOVE_FROM_BASKET' : 
-            const index = state.basket.findIndex(
+            const index_rem = state.basket.findIndex(
                 (basketItem) => basketItem.id === action.id
             );
-            console.log("INDEX REM  = ", index);
+            console.log("INDEX REM  = ", index_rem);
             let newBasket = [...state.basket];
 
-            if(index >= 0) {
-                newBasket.splice(index, 1);
+            if(index_rem >= 0) {
+
+                if(action.quantity > 1) {
+                    state.basket[index_rem].quantity--;
+                } else {
+                    newBasket.splice(index_rem, 1);
+                }
+
             } else {
                 console.warn(
                     `Can not remove product (id: ${action.id}) as it is not in the basket!`

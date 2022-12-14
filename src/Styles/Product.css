@@ -14,6 +14,9 @@
 
     background-color: white;
     z-index: 1;
+
+    transition: all;
+    -webkit-transition: all 0.1s ease;
 }
 
 .product:hover
@@ -21,6 +24,10 @@
   -moz-box-shadow: 0 0 30px #ccc;
   -webkit-box-shadow: 0 0 30px #ccc;
   box-shadow: 0 0 30px #ccc;
+  box-sizing : content-box;
+  -webkit-box-sizing : content-box;
+  transform:scale(1.05);
+  -webkit-transform:scale(1.05);
 }
 
 .product__rating {

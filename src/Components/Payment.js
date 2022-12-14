@@ -114,10 +114,12 @@ function Payment() {
                     {basket.map(item => (
                         <CheckoutProduct 
                             id={item.id}
+                            details={item.details}
                             title={item.title}
                             image={item.image}
                             price={item.price}
                             rating={item.rating}
+                            quantity={item.quantity}
                             key={item.id}
                         />
                     ))}

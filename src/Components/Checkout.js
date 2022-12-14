@@ -9,24 +9,10 @@ import FlipMove from "react-flip-move"
 function Checkout() {
 
     const [{ basket, user }] = useStateValue(); 
-
-    // BASKET / SANS DOUBLONS
-    /*
-    if(basket?.length > 1) {
-
-        for(let a=0; a<basket.length-1; a++) {
-
-            if(basket[a].id === basket[a+1].id) {
-                
-                basket[a].quantity++;
-                basket.splice(a+1, 1);
-            }
-        }
-    }
-    */
     console.log("BASKET >>> ", basket);
 
-    // HOMEWORK : QUANTITY Product
+    // WORK : PRODUCT Hover, Done.
+    // HOMEWORK : QUANTITY Product, Done.
     // MY HOMEWORK : Username SetUser
 
   return (
