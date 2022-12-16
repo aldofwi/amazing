@@ -19,7 +19,7 @@ function CheckoutProduct({ id, image, title, details, price, rating, quantity, h
 
     const incrementItem = () => {
 
-        if(quantity < 11) {
+        if(quantity < 10) {
             // Increment value of Quantity
             dispatch({
                 type: 'ADD_TO_BASKET',
